@@ -1,0 +1,94 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+.layout {
+    display:grid;
+    grid-template:
+    "headerone headertwo headerthree" .25fr
+    "user-menu postbar news-menu" .75fr
+    "org-menu posts mostviewed" 2fr
+    "recenttags posts addtofeed" 2fr /
+    1fr        2fr      1fr;
+}
+
+.headerone {
+    grid-area:headerone;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.headertwo {
+    grid-area:headertwo;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.headerthree {
+    grid-area:headerthree;
+    background-color: aliceblue;
+    text-align: center;
+}
+
+.user-menu {
+    grid-area:user-menu;
+    background-color: aqua;
+}
+
+.postbar {
+    grid-area:postbar;
+    background-color: rgb(76, 100, 100);
+}
+
+.news-menu{
+    grid-area:news-menu;
+    background-color: rgb(172, 128, 46);
+}
+
+.org-menu {
+    grid-area:org-menu;
+    background-color: rgb(70, 9, 78);
+}
+
+.posts {
+    grid-area:posts;
+    background-color: rgb(162, 175, 175);
+    height: 50vh;
+}
+
+.mostviewed {
+    grid-area:mostviewed;
+    background-color: rgb(94, 10, 28);
+}
+
+.recenttags {
+    grid-area:recenttags;
+    background-color: rgb(5, 97, 97);
+}
+
+.addtofeed {
+    grid-area:addtofeed;
+    background-color: rgb(206, 207, 103);
+}
+
+@media screen and (max-width: 987px) {
+    .layout {
+            grid-template:
+            "headertwo headerthree" .25fr
+            "postbar news-menu" .75fr
+            "posts mostviewed" 2fr
+            "posts addtofeed" 2fr /
+              1.75fr      1.25fr;
+    }
+    .user-menu, 
+    .org-menu, 
+    .recenttags, 
+    .headerone {
+        display:none;
+    }
+       
+}
+
+
+
